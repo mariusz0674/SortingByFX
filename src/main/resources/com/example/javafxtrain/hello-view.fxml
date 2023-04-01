@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="900.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxtrain.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane fx:id="statesPane" prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="statesSize" layoutX="310.0" layoutY="16.0" text="Label" />
+         <Label fx:id="statesSpeed" layoutX="627.0" layoutY="16.0" text="Label" />
+         <Label fx:id="statesCompares" layoutX="434.0" layoutY="16.0" text="Label" />
+         <Label fx:id="statesSwaps" layoutX="735.0" layoutY="16.0" text="Label" />
+         <Label fx:id="statesAlgorytmName" layoutX="14.0" layoutY="16.0" text="Label" />
+         <Label fx:id="statusStatus" layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="324.0" text="Label" />
+      </children></Pane>
+   <Pane fx:id="operationPane" prefHeight="529.0" prefWidth="1160.0" />
+   <FlowPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="changeSpeed" mnemonicParsing="false" onAction="#onSpeedChangeButtonClick" text="Instant">
+            <FlowPane.margin>
+               <Insets right="10.0" />
+            </FlowPane.margin></Button>
+         <Button fx:id="startSortingButton" mnemonicParsing="false" onAction="#onStartSortingButtonClick" prefHeight="25.0" prefWidth="71.0" text="Start">
+            <FlowPane.margin>
+               <Insets right="10.0" />
+            </FlowPane.margin></Button>
+         <Button fx:id="stopSortingButton" mnemonicParsing="false" onAction="#onStopSortingButtonClick" prefHeight="25.0" prefWidth="71.0" text="Stop">
+            <FlowPane.margin>
+               <Insets right="10.0" />
+            </FlowPane.margin></Button>
+         <Pane prefHeight="81.0" prefWidth="225.0">
+            <children>
+               <Slider fx:id="arraySizeSlider" blockIncrement="1.0" layoutY="6.0" majorTickUnit="1.0" max="3.0" min="1.0" minorTickCount="1" prefHeight="17.0" prefWidth="112.0" value="2.0" />
+               <Button fx:id="generateNewArrayButton" layoutY="55.0" mnemonicParsing="false" onAction="#onGenerateNewArrayButtonClick" prefHeight="25.0" prefWidth="112.0" text="Generate" />
+               <Label fx:id="sizeLabel" layoutX="11.0" layoutY="23.0" prefHeight="25.0" prefWidth="90.0" text="Size: 100" />
+               <Slider fx:id="maxValueSlider" layoutX="137.0" layoutY="8.0" majorTickUnit="1.0" max="1000000.0" min="10.0" minorTickCount="1" prefHeight="14.0" prefWidth="90.0" value="100.0" />
+               <Label fx:id="maxValueLabel" layoutX="140.0" layoutY="28.0" text="Max Val" />
+               <Button fx:id="changeMaxValue" layoutX="128.0" layoutY="57.0" mnemonicParsing="false" onAction="#onMaxValueArrayChangeButtonClick" text="Aply new Max" />
+            </children>
+            <FlowPane.margin>
+               <Insets right="10.0" />
+            </FlowPane.margin>
+         </Pane>
+         <Pane prefHeight="78.0" prefWidth="155.0" />
+         <Pane fx:id="speedPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="76.0" prefWidth="258.0">
+            <children>
+               <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="13.0" layoutY="5.0" majorTickUnit="1.0" max="3.0" minorTickCount="1" prefHeight="37.0" prefWidth="112.0" value="1.0" />
+               <Label fx:id="speedLabel" layoutX="142.0" layoutY="14.0" text="Speed" />
+            </children>
+         </Pane>
+         <ComboBox fx:id="algorithmSelector" prefWidth="150.0" promptText="Select Algorithm" />
+      </children>
+   </FlowPane>
+
+    <Label fx:id="welcomeText" />
+</VBox>
